@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $foods = Food::inRandomOrder()
     ->first();
-    return view('welcome');
+    dd($foods);
+    return view('foods.index', ['foods' => $foods]);
 });
 
 Auth::routes();
