@@ -15,12 +15,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $foods = Food::inRandomOrder()
-    ->first();
-    dd($foods);
-    return view('foods.index', ['foods' => $foods]);
+    $foods = Food::All();
+
+    $Snacks = [];
+    $Sweets = [];
+    $Vegetables = [];
+    
+
+   
+
+    foreach($foods as $key => $food) {
+
+        $food['ID'] = $key;
+        
+
+        if($food['Food_Group'] == 'Snacks') {
+            $Snacks[] = $food;
+        } else if($food['Food_Group'] == 'Sweets') {
+            $Sweets[] = $food;
+        } else if($food['Food_Group'] == 'Vegetables') {
+            $Vegetables[] = $food;
+        } 
+        
+    }
+    return view('index', [
+        'Snacks' => $Snacks,
+        'Sweets' => $Sweets,
+        'Vegetables' => $Vegetables
+    ]);
 });
 
-Auth::routes();
+ //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

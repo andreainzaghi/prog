@@ -1,0 +1,79 @@
+*{
+  margin:0;
+  padding:0,inherit;
+  box-sizing: border-box;
+}
+body{
+  font-size:20px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+  height: 100px;
+  background-color: #26b30e;
+  width: 100%;
+}
+header img {
+  width: 100px;
+  position: relative;
+  top: 40px;
+  left: calc(50% - 50px);
+}
+.input-generalita{
+  width:33%;
+  height: calc( 100vh - 100px);
+  padding:20px;
+}
+input ,select{
+  width:350px;
+  height:50px;
+  font-size:20px;
+  padding:10px;
+  margin:10px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+ button{
+  width:350px;
+  height:50px;
+  background-color: #26b30e;
+  font-size:20px;
+  padding:10px;
+  margin:10px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+main{
+  display: flex;
+}
+
+.diagrammi{
+  display: flex;
+}
+.tot-chilopage{
+
+  font-family: 'Montserrat', sans-serif;
+}
+.tot-chilopage p{
+  padding:10px;
+  text-align: right;
+}
+.secondsection{
+  padding:20px;
+}
+
+/* sfondoinput */
+.sfondo1{
+  background-image: url('../img/jos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sfondo2{
+  background-image: url('../img/bianca.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

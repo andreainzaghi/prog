@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <title>Laravel</title>
+  <style media="screen">
+  .canvy{
+    width: 300px;
+    height:300px;
+  }
+  .containerpie{
+    width: 350px;
+    height:350px;
+  }
+  </style>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+  <!-- Styles -->
+
+</head>
+<body>
+  <header>
+    <img src="img/llogoo.png" alt="">
+  </header>
+  <main>
+    <div class="input" id="app">
+        <!-- input -->
+        <div class="input-generalita">
+          <div class="select">
+            <select name="sexo"  v-model="Sesso">
+              <option  value="">Bambino 1-5 anni</option>
+              <option  value="Uomo">Uomo</option>
+              <option   value="Donna">Donna</option>
+            </select>
+          </div>
+          <div class="input-peso">
+            <input type="text" placeholder="Peso in Kg"v-model="Peso">
+          </div>
+          <div class="input-altezza">
+            <input type="text"placeholder="Altezza in cm"v-model="Altezza">
+          </div>
+          <div class="input-eta">
+            <input type="text"placeholder="Eta'"v-model="Eta">
+          </div>
+          <select v-model="selected">
+            <option>poca</option>
+            <option>media</option>
+            <option>alta</option>
+          </select>
+          <div class="button-1">
+            <button @click="Prova">
+              calcola fabbisogno kcal
+            </button>
+          </div>
+          <div class="button-2">
+            <button @click="Prova1">
+              calcola fabbisogno kcal
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- fine input -->
+      <!-- inizio sezione dati -->
+      <div class="secondsection">
+        <div class="totkcal" >
+          <div class="tot-chilopage">
+            <p>BMI(Indice massa corporea):<span id="bmi"></span> %</p>
+            <p>Il tuo peso ideale e': <span id="pesoIdeale"></span> kg </p>
+            <p> secondo i dati che ci hai fornito ,ti consigliamo di <span id="pesodasistemare"></span> </p>
+
+          </div>
+        </div>
+      <!-- diagrammi -->
+      <div class="diagrammi">
+
+        <div class="canvy">
+          <canvas id="myChart" width="100px" height="100px"></canvas>
+          <p id ="pesocheaumenta"></p>
+          <span class="pesoraz"><span id ="pesorazionatoingiorni"></span>kg/mese</span>
+        </div>
+        <div class="containerpie">
+          <canvas id="myChart1"></canvas>
+          <!-- <p><span id="percCarb"></span> Kcal =  Carboidrati</p>
+          <p><span id="percGrassi"></span> Kcal =  Grassi</p>
+          <p><span id="percProte"></span> Kcal =  Proteine</p> -->
+        </div>
+      </div>
+      <!-- diagrammi fine -->
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
+</body>
+</html>
