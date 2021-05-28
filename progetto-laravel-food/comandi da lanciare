@@ -1,0 +1,14 @@
+per laravel (per server locale8000) : php artisan serve
+
+per sass : npx mix watch
+
+staccare tutto : ctrl + c
+_____________________________________________________________________
+
+nel caso dovessi installare tutto :
+
+1. composer create-project --prefer-dist laravel/laravel:^7.0 .
+
+2. npm install ( se lo chiede ( npm audit fix --force))
+
+3. npx mix -----> npx mix watch

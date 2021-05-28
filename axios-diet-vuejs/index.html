@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li  @click="prova(index)" v-for="(food,index) in foods">
+        {{ food.Food }}
+
+      </li>
+    </ul>
+      {{ foods[currentUser].ID }}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
