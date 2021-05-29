@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $foods = Food::All();
 
     $Snacks = [];
@@ -50,7 +50,10 @@ Route::get('/', function () {
 /*Route::get('/home', 'HomeController@index')->name('home');
 
 */
-
+Route::get('/', function() {
+   
+    return view('login.index');
+})->name('login');
 
 
 Route::get('/news', function() {
