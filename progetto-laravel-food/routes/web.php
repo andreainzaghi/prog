@@ -60,7 +60,7 @@ Route::get('/news', function() {
     return view('news',['food' => $foods]);
 })->name('news');
 
-Route::get('prodotto/{id?}', function ($id = 10) {
+Route::get('prodotto/{id?}', function ($id = 4998) {
     
     $foods = Food::All();
     
