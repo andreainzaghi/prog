@@ -10002,3 +10002,51 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards .card {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 33;
+  right: 0;
+}
+header ul {
+  text-align: center;
+  margin-top: 30px;
+}
+header ul li {
+  display: inline-block;
+  padding: 15px;
+}
+
+.container-home, .product-prodotto {
+  margin: 70px auto;
+}
+
+.product-prodotto {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: calc(100vh - 70px);
+}
+.product-prodotto .container-p {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid black;
+  width: 500px;
+  margin: auto;
+}
+.product-prodotto .container-p .product-chevron-right, .product-prodotto .container-p .product-chevron-left {
+  padding: 15px;
+}

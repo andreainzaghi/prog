@@ -3,29 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>andy's Website</title>
   </head>
-  <body>
+
+  <body id="app">
 
     <canvas id="bg"></canvas>
 
     <main>
 
       <header>
-        <h1>Andrea Inzaghi</h1>
+        <section>
 
+          <div class="verde-s">
+          <img src="llogoo0.png" alt="" height=50px>
+          </div>
+        <h6>Benvenuto nella piattaforma del benessere <br>
+      Come prima cosa voglio darti il benvenuto <br>
+      Chi sei?</h6>
+        <form class="" action="index.html" method="post">
+          <input type="text" name="" value="" placeholder="Inserisci il tuo nome" v-model="nome">
+        </form>
+  </section>
       </header>
 
 
       <blockquote>
-        <p>diet</p>
+
       </blockquote>
 
       <section>
-        <h2>chilopage</h2>
+        <div class="verde-s">
+   <img src="llogoo0.png" alt="" height=50px>
+        </div>
+        <h2>Scientific Diet</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Ciao {{nome}}
         </p>
 
         <p>
@@ -39,6 +54,9 @@
       </section>
 
       <section class="light">
+        <div class="verde-s">
+           <img src="llogoo0.png" alt="" height=50px>
+        </div>
         <h2>👩🏽‍🚀 Projects</h2>
 
         <p>
@@ -54,16 +72,27 @@
       </section>
 
       <blockquote>
-        <p>The best way out is always through </p>
+        <p>Il miglior modo per rimanere in forma</p>
       </blockquote>
 
 
 
 
     </main>
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script type="module" src="/main.js"></script>
+<script type="text/javascript">
 
+      new Vue({
+        el: '#app',
+        data:{
+         nome:null
+
+        }
+
+      })
+
+</script>
 
 
 

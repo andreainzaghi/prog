@@ -1,3 +1,5 @@
+
+
 @extends('layouts.main')
 
 @section('pageTitle')
@@ -5,15 +7,15 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container-home">
 	<section>
+		
 		<h2>Snacks</h2>
+	
 		<div class="cards">
 			@foreach ($Snacks as $food)
 			<div class="card">
-				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><p>{{$food}}</p></a>
-				
-				
+				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
 			</div>
 			@endforeach
 		</div>
@@ -24,7 +26,7 @@
 		<div class="cards">
 			@foreach ($Sweets as $food)
 			<div class="card">
-				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><p>{{$food}}</p></a>
+				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
 			</div>
 			@endforeach
 		</div>
@@ -35,7 +37,7 @@
 		<div class="cards">
 			@foreach ($Vegetables as $food)
 			<div class="card">
-				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><p>{{$food}}</p></a>
+				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
 			</div>
 			@endforeach
 		</div>

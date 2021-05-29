@@ -6,9 +6,14 @@
 
 @section('content')
 	<div class="product">
-		<div class="container">
-			<p>{{$food}}</p>
 
+		@foreach ($food as $foo)
+		<div class="container">
+			
+			  <p>{{$foo}}</p> 
+		    
 		</div>
+		@endforeach
+	
 	</div>
 @endsection

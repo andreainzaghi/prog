@@ -12,6 +12,10 @@ $menu = [
 	[
 		'name' => 'news',
 		'label' => 'News'
+	],
+	[
+		'name' => 'chilopage',
+		'label' => 'chilopage'
 	]
 ];
 @endphp

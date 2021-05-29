@@ -6,7 +6,18 @@ canvas {
   left: 0;
 }
 
+h2 ,p{
+  padding:1rem;
+}
+h6{
+  color:black;
+  padding:1rem;
+      font-family: 'Montserrat', sans-serif;
 
+}
+section form{
+  padding:1rem;
+}
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
@@ -24,16 +35,21 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3 {
+ color:black;
+  font-weight: 600;
+  background-color: #fff;
 
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-
- 
   font-style: normal;
 }
 
@@ -43,21 +59,29 @@ canvas {
   left: 0;
 }
 
-
-
+.verde-s{
+  height:70px;
+  width:100%;
+  background-color: #26b30e;
+}
+section img{
+  position:relative;
+  top:40px;
+  left:calc(50% - 20px);
+}
   header {
-    
+
     grid-column: 2 / span 5;
     font-size: 2.5rem;
     padding: 2rem;
-   
+
     margin-bottom: var(--spacing);
   }
 
   section {
     grid-column: 2 / 8;
-    padding: 1rem;
-    background: var(--dark-bg);
+   color:black;
+    background:#fff;
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
@@ -73,7 +97,7 @@ canvas {
   blockquote p {
     color: black;
     background-color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     display: inline;
     line-height: 1;
   }

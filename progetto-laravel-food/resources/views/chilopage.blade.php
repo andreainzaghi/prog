@@ -138,12 +138,12 @@
             <option>alta</option>
           </select>
           <div class="button-1">
-            <button @click="Prova">
+            <button on:click="Prova">
               calcola fabbisogno kcal
             </button>
           </div>
           <div class="button-2">
-            <button @click="Prova1">
+            <button on:click="Prova1">
               calcola fabbisogno kcal
             </button>
           </div>

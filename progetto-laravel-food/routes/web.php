@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
+
+
+Route::get('/', function () {
     $foods = Food::All();
+
+    
 
     $Snacks = [];
     $Sweets = [];
@@ -45,25 +49,13 @@ Route::get('/home', function () {
     ]);
 })->name('homepage');
 
- //Auth::routes();
-
-/*Route::get('/home', 'HomeController@index')->name('home');
-
-*/
-Route::get('/', function() {
-   
-    return view('login.index');
-})->name('login');
-
 Route::get('/chilopage', function() {
    
     return view('chilopage');
 })->name('chilopage');
 
-
 Route::get('/news', function() {
     $foods = Food::All();
-    
 
     return view('news',['food' => $foods]);
 })->name('news');
@@ -98,7 +90,11 @@ Route::get('prodotto/{id?}', function ($id = 10) {
     ]);
 })->where('id', '[0-9]+')->name('prodotto');
 
-//foods
+ //Auth::routes();
+
+/*Route::get('/home', 'HomeController@index')->name('home');
+
+*/
 
 
 
