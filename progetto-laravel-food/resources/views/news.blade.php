@@ -8,6 +8,7 @@
 	<div class="product">
 		<div class="container">
 			<p>{{$food}}</p>
+
 		</div>
 	</div>
 @endsection
