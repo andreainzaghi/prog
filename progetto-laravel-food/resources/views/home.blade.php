@@ -1,23 +1,44 @@
-@extends('layouts.app')
+@extends('layouts.main')
+
+@section('pageTitle')
+	Homa Page La Molisana | Sito Ufficiale 
+@endsection
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+	<section>
+		<h2>Snacks</h2>
+		<div class="cards">
+			@foreach ($Snacks as $food)
+			<div class="card">
+				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><p>{{$food}}</p></a>
+				
+				
+			</div>
+			@endforeach
+		</div>
+	</section>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+	<section>
+		<h2>Sweets</h2>
+		<div class="cards">
+			@foreach ($Sweets as $food)
+			<div class="card">
+				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><p>{{$food}}</p></a>
+			</div>
+			@endforeach
+		</div>
+	</section>
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+	<section>
+		<h2>Vegetables</h2>
+		<div class="cards">
+			@foreach ($Vegetables as $food)
+			<div class="card">
+				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><p>{{$food}}</p></a>
+			</div>
+			@endforeach
+		</div>
+	</section>
 </div>
 @endsection
