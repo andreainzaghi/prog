@@ -55,6 +55,11 @@ Route::get('/', function() {
     return view('login.index');
 })->name('login');
 
+Route::get('/chilopage', function() {
+   
+    return view('chilopage');
+})->name('chilopage');
+
 
 Route::get('/news', function() {
     $foods = Food::All();

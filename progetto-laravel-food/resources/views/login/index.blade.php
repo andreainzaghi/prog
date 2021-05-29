@@ -141,6 +141,10 @@
 
       <blockquote>
         <p>The best way out is always through </p>
+        <button>
+         
+          <a href="{{route('chilopage')}}"> chilopage</a>
+        </button>
       </blockquote>
 
 
