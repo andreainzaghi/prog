@@ -16,38 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    $foods = Food::All();
+Route::get('/', 'FoodController@index' )->name('homepage');
+Route::post('/{filter}', 'FoodController@filter')->name('homepage.filter');
 
-    
-
-    $Snacks = [];
-    $Sweets = [];
-    $Vegetables = [];
-    
-    
-   
-
-    foreach($foods as $key => $food) {
-
-        $food['ID'] = $key;
-       
-
-        if($food['Food_Group'] == 'Snacks') {
-            $Snacks[] = $food;
-        } else if($food['Food_Group'] == 'Sweets') {
-            $Sweets[] = $food;
-        } else if($food['Food_Group'] == 'Vegetables') {
-            $Vegetables[] = $food;
-        } 
-        
-    }
-    return view('home', [
-        'Snacks' => $Snacks,
-        'Sweets' => $Sweets,
-        'Vegetables' => $Vegetables
-    ]);
-})->name('homepage');
 
 Route::get('/chilopage', function() {
    
@@ -96,5 +67,10 @@ Route::get('prodotto/{id?}', function ($id = 4998) {
 
 */
 
+Route::get('/prova', function() {
+    $foods = Food::All();
+
+    return view('news',['food' => $foods]);
+})->name('prova');
 
 

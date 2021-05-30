@@ -10143,6 +10143,10 @@ button:active {
   -webkit-text-fill-color: transparent;
 }
 
+main {
+  margin-top: 200px;
+}
+
 .input-tot {
   display: flex;
   margin-top: 100px;

@@ -10,49 +10,41 @@
 <div class="container-home">
 	<section>
 	
-		<h2>Snacks</h2>
+		
 
   
-		<form action="" method="GET">
+<form action = "{{route('homepage.filter',['filter' => 'vegetables'])}}" method="POST">
+			@csrf
+            @method('POST')
 			<input name="filter" type="text" placeholder="Scopri le caratteristiche della tua dieta">
 			
 			<button type="submit">submit</button>
 		</form>
 
 
-		<div class="cards">
-			@foreach ($Snacks as $food)
-			<div class="card">
-				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span class="titolo-name-food">{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
-			</div>
-			@endforeach
-		</div>
-	</section>
+
+	
 
 
-
-
-
-	<section>
-		<h2>Sweets</h2>
-		<div class="cards">
-			@foreach ($Sweets as $food)
-			<div class="card">
-				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
-			</div>
-			@endforeach
-		</div>
+	
 	</section>
 
 	<section>
-		<h2>Vegetables</h2>
+		
 		<div class="cards">
-			@foreach ($Vegetables as $food)
+			 @foreach ($Foods as $food) 
+			
+			{{-- @if ($food == 'name') --}}
 			<div class="card">
 				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
 			</div>
+				
+			{{-- @endif --}}
+				
+			
 			@endforeach
 		</div>
 	</section>
+
 </div>
 @endsection
