@@ -59,7 +59,7 @@ Route::get('prodotto/{id?}', function ($id = 4998) {
         'prevProdottoId' => $prev,
         'nextProdottoId' => $next
     ]);
-})->where('id', '[0-9]+')->name('prodotto');
+})->where('id', '[0-4997]+')->name('prodotto');
 
  //Auth::routes();
 

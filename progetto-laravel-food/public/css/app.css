@@ -10005,6 +10005,7 @@ h3 {
 }
 .cards {
   display: flex;
+  padding-top: 20px;
   flex-wrap: wrap;
 }
 .cards .card {
@@ -10034,8 +10035,10 @@ h3 {
 header {
   position: fixed;
   top: 0;
+  box-shadow: -2px -2px 12px white, 2px 2px 4px rgba(121, 130, 160, 0.747);
   left: 0;
   z-index: 33;
+  background-color: #F8FAFC;
   right: 0;
 }
 header ul {
@@ -10144,7 +10147,15 @@ button:active {
 }
 
 main {
-  margin-top: 200px;
+  margin-top: 125px;
+}
+
+.container-home form {
+  position: fixed;
+  bottom: 50px;
+  left: 11%;
+  right: 10%;
+  z-index: 339;
 }
 
 .input-tot {

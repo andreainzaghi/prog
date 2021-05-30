@@ -12,10 +12,10 @@
 	
 		
 
-  
-<form action = "{{route('homepage.filter',['filter' => 'vegetables'])}}" method="POST">
-			@csrf
-            @method('POST')
+		{{-- {{route('homepage.filter',['filter' => 'vegetables'])}}" method="POST --}}
+<form action = "">
+			{{-- @csrf
+            @method('POST') --}}
 			<input name="filter" type="text" placeholder="Scopri le caratteristiche della tua dieta">
 			
 			<button type="submit">submit</button>
