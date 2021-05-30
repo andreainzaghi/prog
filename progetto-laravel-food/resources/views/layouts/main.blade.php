@@ -20,5 +20,8 @@
 		@include('parts.footer')
 
 		@yield('js')
+		<script src="{{ asset('https://cdn.jsdelivr.net/npm/vue@2') }}"></script>
+		<script src="{{ asset('js/script.js') }}"></script>
+		
 	</body>
 </html>

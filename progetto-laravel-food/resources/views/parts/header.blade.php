@@ -15,16 +15,14 @@ $menu = [
 	],
 	[
 		'name' => 'chilopage',
-		'label' => 'chilopage'
+		'label' => 'Chilopage'
 	]
 ];
 @endphp
 
 <header>
 	<div class="container">
-		<div class="logo">
-			
-		</div>
+		
 		<nav class="main-nav">
 			<ul>
 				@foreach ($menu as $item)

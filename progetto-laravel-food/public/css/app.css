@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10007,9 +10008,27 @@ h3 {
   flex-wrap: wrap;
 }
 .cards .card {
+  padding: 10px;
+  box-shadow: -2px -2px 12px white, 2px 2px 8px rgba(121, 130, 160, 0.747);
+  background: #ebecf0;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #185ef0, #30CFD0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
   width: 300px;
+  color: #8a92a5;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
   margin: 10px;
   padding: 10px;
+}
+.cards .card .titolo-name-food {
+  color: black;
 }
 
 header {
@@ -10021,32 +10040,114 @@ header {
 }
 header ul {
   text-align: center;
-  margin-top: 30px;
+  margin: 30px;
 }
 header ul li {
   display: inline-block;
   padding: 15px;
 }
 
-.container-home, .product-prodotto {
-  margin: 70px auto;
+.container-home, .product-prodotto, .input-generalita {
+  width: 960px;
+  margin: 80px auto;
 }
 
 .product-prodotto {
-  text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
-  width: calc(100vh - 70px);
+  height: calc(100vh - 160px);
+}
+.product-prodotto .product-prodotto1 {
+  align-items: center;
+  display: flex;
+  min-height: 400px;
+  padding: 10px;
+  box-shadow: -2px -2px 12px white, 2px 2px 8px rgba(121, 130, 160, 0.747);
+  background: #ebecf0;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #185ef0, #30CFD0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  color: #8a92a5;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+  padding: 10px;
 }
 .product-prodotto .container-p {
   justify-content: center;
   align-items: center;
   display: flex;
-  border: 1px solid black;
   width: 500px;
   margin: auto;
 }
 .product-prodotto .container-p .product-chevron-right, .product-prodotto .container-p .product-chevron-left {
   padding: 15px;
+}
+
+input, select {
+  width: calc(100% - 240px);
+  height: 45px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  background: #ebecf0;
+  color: #8a92a5;
+  box-shadow: inset -4px -4px 8px white, inset 4px 4px 8px rgba(121, 130, 160, 0.747);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  position: relative;
+  width: 220px;
+  padding: 10px;
+  box-shadow: -4px -4px 12px white, 4px 4px 12px rgba(121, 130, 160, 0.747);
+  background: #ebecf0;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  color: #8a92a5;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+}
+
+button:active {
+  box-shadow: inset -2px -2px 6px white, inset 2px 2px 6px rgba(121, 130, 160, 0.747);
+  color: #185ef0;
+}
+
+.main-nav ul li {
+  font-size: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #185ef0, #30CFD0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-tot {
+  display: flex;
+  margin-top: 100px;
+  padding: 0 0 0 50px;
+}
+.input-tot .secondsection {
+  margin-top: 80px;
 }
