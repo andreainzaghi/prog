@@ -12,55 +12,16 @@ class FoodController extends Controller
  
     public function index(){
         $foods = Food::All();
-       
-        return view('home', ['Foods'=>$foods]);
+        $search = request()->get('search');
+        return view('home', ['Foods'=>$foods,'search'=>$search]);
     }
 
 
     public function search(Request $request){
         $foods = Food::All();
-        $ciboarr=[];
        if($foods){
-            $ciboarr[]=$foods;
-            $search = request()->get('search');
-            if($search){
-                for($i = 0; $i <= $ciboarr; ++$i){
-                    if($i == $search){
-                        $foods = $i;
-                    }
-                }
-            }
+             $search = request()->get('search');
        }
-      
-       
-        // $posts = DB::table('Foods')->where('title','LIKE',"%.$search.'%'")->paginate();
-      
-        return view('home', ['search'=>$search,'Foods'=>$foods]);
+        return view('home', ['Foods'=>$foods,'search'=>$search]);
     }
-   
-   
-    // public function filter(){
-    //     $prova = 'Vegetabrrles';
-    //     $tags = Tag::All();
-    //     $tag = Tag::where('name',$prova)->first();
-    //     if ( $tag == null ) {
-    //        abort(404);
-    //      }
-    //      $foods = $tag->foods()->get();        
-    //     return view('home',compact('foods','tags',['prova'=>$prova]));
-
-    // }
-  
-
 }
-
-
-// public function filterTag($slug)    {
-//     $tags = Tag::all();
-//     $tag = Tag::where('slug', $slug)->first();
-//     if ( $tag == null ) {
-//         abort(404);
-//     }
-//     $posts = $tag->posts()->where('published', 1)->get();
-//     return view('guest.index', compact('posts', 'tags'));
-// }
