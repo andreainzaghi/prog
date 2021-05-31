@@ -230,7 +230,7 @@ var app = new Vue({
       // })
     },
     Prova1:function(){
-
+      console.log('cliccato1');
 
       if (this.Sesso == 'Uomo') {
         this.Calorie = (5 + (this.Peso * 10) + (this.Altezza * 6.25) - (this.Eta * 5));
