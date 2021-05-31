@@ -19,11 +19,19 @@ class FoodController extends Controller
 
     public function search(Request $request){
         $foods = Food::All();
-       
-        $search = request()->get('search');
-        if($search){
-            dd($search);
-        }
+        $ciboarr=[];
+       if($foods){
+            $ciboarr[]=$foods;
+            $search = request()->get('search');
+            if($search){
+                for($i = 0; $i <= $ciboarr; ++$i){
+                    if($i == $search){
+                        $foods = $i;
+                    }
+                }
+            }
+       }
+      
        
         // $posts = DB::table('Foods')->where('title','LIKE',"%.$search.'%'")->paginate();
       
