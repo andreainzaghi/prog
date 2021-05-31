@@ -31,11 +31,11 @@
 						
 			 @foreach ($Foods as $food) 
 			
-			@if ($food['name'] == $search)
+			{{-- @if ($food['name'] ) --}}
 			<div class="card">
 				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
 			</div>
-			@endif
+			{{-- @endif --}}
 				
 			
 			@endforeach
