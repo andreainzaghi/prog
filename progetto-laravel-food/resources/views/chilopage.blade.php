@@ -30,7 +30,7 @@
             <option>alta</option>
           </select>
           <div class="button-1">
-            <button on:click="Prova,Prova1">
+            <button v-on:_click="Prova,Prova1">
               calcola  kcal
             </button>
           </div>

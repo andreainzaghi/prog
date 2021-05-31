@@ -15,9 +15,10 @@
         <form method="GET"  action="/search">
 			{{-- @csrf
             @method('POST') --}}
-			<input name="search" type="search" class = "form-control" placeholder="Scopri le caratteristiche della tua dieta">
+			<div><input name="search" type="search" class = "form-control" placeholder="Scopri le caratteristiche della tua dieta"></div>
 			
-			<button type="submit">submit</button>
+			<div><button type="submit">submit</button></div>
+			
 		</form>
 
 

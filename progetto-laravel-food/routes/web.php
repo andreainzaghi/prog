@@ -29,6 +29,7 @@ Route::get('/chilopage', function() {
 Route::get('/news', function() {
     $foods = Food::All();
 
+
     return view('news',['food' => $foods]);
 })->name('news');
 

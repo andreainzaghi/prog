@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+
+</head>
+<body>
+<div class="container">
+    <div class="box1">
+        <div class="AC_tx">
+            <h1>Ac</h1>
+        </div>
+
+        <div class="button_Share">
+            <button class="btn2">share</button>
+            <button class="btn2">Loaction</button>
+        </div>
+    </div>
+
+
+    <div class="box1">
+        <div class="button_t">
+            <span class="buttont">Button</span>
+            <input type="email" placeholder="input">
+            <span class="buttont pt">Like</span>
+            <span class="buttont"><i class="fas fa-user-plus"></i>Add User</span>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="box1">
+        <div class="NextpsBt">
+            <button class="NPB"><i class="fas fa-angle-left"></i></button>
+            <button class="NPB"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+        <div class="radiobg">
+            <label class="radio">
+              <span class="sr-only">Checkbox</span>
+              <input type="radio" class="radio__input" name="example">
+              <span class="radio__checkmark"></span>
+            </label>
+            <label class="radio">
+              <span class="sr-only">Checkbox</span>
+              <input type="radio" class="radio__input" name="example" checked="">
+              <span class="radio__checkmark"></span>
+            </label>
+        </div>
+
+
+        <div class="togglebx">
+            <label class="labelt">
+              <div class="con">
+                  <input class="switch" type="checkbox" name="check" value="check">
+                  <div class="toggle"></div>
+              </div>
+            </label>
+            <label class="labelt">
+              <div class="con">
+                  <input class="switch" type="checkbox" name="check" value="check" checked>
+                  <div class="toggle"></div>
+              </div>
+            </label>
+        </div>
+
+
+
+        <div class="progress">
+            <div class="skill">
+              <div class="therm outer-therm vertical"
+              style="width:50px;height:150px;background-color:#eeeff2">
+               <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 50%; width: 50px;">
+               </div>
+              </div>
+            </div>
+
+
+            <div class="skill">
+              <div class="therm outer-therm vertical"
+              style="width:50px;height:200px;background-color:#eeeff2">
+               <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 80%; width: 50px;">
+
+               </div>
+              </div>
+            </div>
+
+
+            <div class="skill">
+              <div class="therm outer-therm vertical"
+              style="width:50px;height:108px;background-color:#eeeff2">
+               <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 55%; width: 50px;">
+
+               </div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="therm outer-therm vertical"
+              style="width:50px;height:216px;background-color:#eeeff2">
+               <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 80%; width: 50px;">
+
+               </div>
+              </div>
+          </div>
+
+
+          <div class="skill">
+            <div class="therm outer-therm vertical"
+            style="width:50px;height:150px;background-color:#eeeff2">
+             <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 65%; width: 50px;">
+
+             </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="box2">
+      <div class="searchbx">
+        <div class="field">
+          <span class="fas fa-search" aria-hidden="true"></span>
+          <input type="search" placeholder="search">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="box2">
+      <div class="neumorphic-slider" onselectstart="return false">
+        <div class="neumorphic-slider__back"></div>
+        <div class="neumorphic-slider__line"></div>
+        <div class="neumorphic-slider__thumb"></div>
+        <div class="neumorphic-slider__popover">40%</div>
+      </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+ //progress bar //
+$('.neumorphic-slider__thumb').on('mousedown', function(){
+  $(document).on('mousemove.mm', function(e){
+    var new_value = 0;
+    if (e.clientX < $('.neumorphic-slider').offset().left) {
+      new_value = '0%';
+    } else if (e.clientX > $('.neumorphic-slider').offset().left + $('.neumorphic-slider').width() - 10) {
+      new_value = '100%';
+    } else {
+      new_value = ((e.clientX - $('.neumorphic-slider').offset().left) / ($('.neumorphic-slider').width() - 10) * 100).toFixed(0) + '%';
+    }
+    document.documentElement.style.setProperty('--value', new_value);
+    $('.neumorphic-slider__popover').text(new_value);
+  });
+  $(document).on('mouseup.mu', function(){
+    $(document).off('mousemove.mm');
+    $('.neumorphic-slider__thumb').off('mouseup.mu');
+  });
+});
+</script>
+</div>
+</body>
+</html>

@@ -48,7 +48,7 @@ header{
     2px 2px 4px rgba(121, 130, 160, 0.747);
     left:0;
     z-index: 33;
-    // background-color:#F8FAFC;
+    background-color:#F8FAFC;
     right:0;
     ul {
         text-align: center;
@@ -182,13 +182,23 @@ main{
 
 //product
 .container-home{
-    form{
-        
-        position:fixed;
-        bottom:50px;
-       width:80%;
-        z-index: 339;
+    section{
+        form{
+            position:fixed;
+            bottom:50px;
+            display:flex;      
+            z-index: 339;
+            div:first-child{
+                width:100vh;
+                input{
+                    width:100%;
+                }
+                
+            }
+           
+        }
     }
+  
 }
 .input-tot{
     display:flex;

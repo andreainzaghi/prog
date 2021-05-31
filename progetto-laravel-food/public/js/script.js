@@ -24,6 +24,7 @@ var app = new Vue({
 
   methods:{
     Prova:function(){
+      console.log('cliccato');
 
 
       if (this.Sesso == 'Uomo') {

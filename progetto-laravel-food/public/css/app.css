@@ -10038,6 +10038,7 @@ header {
   box-shadow: -2px -2px 12px white, 2px 2px 4px rgba(121, 130, 160, 0.747);
   left: 0;
   z-index: 33;
+  background-color: #F8FAFC;
   right: 0;
 }
 header ul {
@@ -10149,11 +10150,17 @@ main {
   margin-top: 125px;
 }
 
-.container-home form {
+.container-home section form {
   position: fixed;
   bottom: 50px;
-  width: 80%;
+  display: flex;
   z-index: 339;
+}
+.container-home section form div:first-child {
+  width: 100vh;
+}
+.container-home section form div:first-child input {
+  width: 100%;
 }
 
 .input-tot {
