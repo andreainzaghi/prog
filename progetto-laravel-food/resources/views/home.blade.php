@@ -13,17 +13,23 @@
 		
 
 		{{-- {{route('homepage.filter',['filter' => 'vegetables'])}}" method="POST --}}
-<form action = "">
+		
+		{{-- {{  Form::open(array('action' => array('FoodController@index', 'method' => 'POST'))) }}
+		    @csrf
+            @method('POST')
+	        <input name="filtro" type="text" placeholder="Scopri le caratteristiche della tua dieta">
+			<button type="submit">submit</button>
+        {{ Form::close() }} --}}
+
+
+        <form method="GET"  action="/search">
 			{{-- @csrf
             @method('POST') --}}
-			<input name="filter" type="text" placeholder="Scopri le caratteristiche della tua dieta">
+			<input name="search" type="search" class = "form-control" placeholder="Scopri le caratteristiche della tua dieta">
 			
 			<button type="submit">submit</button>
 		</form>
 
-
-
-	
 
 
 	
@@ -34,11 +40,10 @@
 		<div class="cards">
 			 @foreach ($Foods as $food) 
 			
-			{{-- @if ($food == 'name') --}}
+			{{-- @if ($food == $search) --}}
 			<div class="card">
 				<a href="{{route('prodotto', [ 'id' => $food['id'] ])}}"><span>{{$food['name']}}</span><p>Calorie <span>{{$food['Calories']}}</span></p><p>Proteine <span>{{$food['Protein_g']}}</span></p><p>Grassi <span>{{$food['Fat_g']}}</span> </p><p>Carboidrati <span>{{$food['Carbohydrate_g']}}</span></p></a>
 			</div>
-				
 			{{-- @endif --}}
 				
 			

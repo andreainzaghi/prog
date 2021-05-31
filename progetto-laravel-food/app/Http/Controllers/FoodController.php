@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;
 use App\Food;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class FoodController extends Controller
@@ -11,10 +12,25 @@ class FoodController extends Controller
  
     public function index(){
         $foods = Food::All();
-        
+       
         return view('home', ['Foods'=>$foods]);
     }
 
+
+    public function search(Request $request){
+        $foods = Food::All();
+       
+        $search = request()->get('search');
+        if($search){
+            dd($search);
+        }
+       
+        // $posts = DB::table('Foods')->where('title','LIKE',"%.$search.'%'")->paginate();
+      
+        return view('home', ['search'=>$search,'Foods'=>$foods]);
+    }
+   
+   
     // public function filter(){
     //     $prova = 'Vegetabrrles';
     //     $tags = Tag::All();

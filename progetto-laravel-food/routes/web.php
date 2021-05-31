@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'FoodController@index' )->name('homepage');
-Route::post('/{filter}', 'FoodController@filter')->name('homepage.filter');
+Route::get('/search', 'FoodController@search' );
+// Route::post('/{filter}', 'FoodController@filter')->name('homepage.filter');
 
 
 Route::get('/chilopage', function() {
@@ -30,6 +31,7 @@ Route::get('/news', function() {
 
     return view('news',['food' => $foods]);
 })->name('news');
+
 
 Route::get('prodotto/{id?}', function ($id = 4998) {
     
