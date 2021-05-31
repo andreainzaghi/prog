@@ -294,11 +294,11 @@ var app = new Vue({
       let myChart = document.getElementById('myChart1').getContext('2d');
 
       // Global Options
-      Chart.defaults.global.defaultFontFamily = 'Lato';
-      Chart.defaults.global.defaultFontSize = 18;
-      Chart.defaults.global.defaultFontColor = '#777';
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#777';
 
-      let massPopChart = new Chart(myChart1, {
+      var massPopChart = new Chart(myChart1, {
         type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data:{
           labels:[' 40% carboidrati ' + percCarb +' Kcal', ' 25% grassi ' + percGrassi +' Kcal', ' 35% proteine ' + percProte +' Kcal'],

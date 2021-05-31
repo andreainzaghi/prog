@@ -10171,3 +10171,8 @@ main {
 .input-tot .secondsection {
   margin-top: 80px;
 }
+
+.containerpie, .canvy {
+  width: 200px;
+  height: 200px;
+}
