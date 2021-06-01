@@ -61,7 +61,7 @@
           <span class="pesoraz"><span id ="pesorazionatoingiorni"></span>kg/mese</span>
         </div>
         <div class="containerpie">
-          <canvas id="myChart1"></canvas>
+          <canvas id="myChar"></canvas>
         </div>
       </div>
       <!-- diagrammi fine -->

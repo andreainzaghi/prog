@@ -203,31 +203,6 @@ var app = new Vue({
         }
       });
 
-      //     var ctxx = document.getElementById('myChart1').getContext('2d');
-      //
-      //   var myChart = new Chart(ctxx, {
-      //     const config = {
-      //     type: 'doughnut',
-      //     data: data,
-      //   };
-      //   const data = {
-      //     labels: [
-      //       'Red',
-      //       'Blue',
-      //       'Yellow'
-      //     ],
-      //     datasets: [{
-      //       label: 'My First Dataset',
-      //       data: [300, 50, 100],
-      //       backgroundColor: [
-      //         'rgb(255, 99, 132)',
-      //         'rgb(54, 162, 235)',
-      //         'rgb(255, 205, 86)'
-      //       ],
-      //       hoverOffset: 4
-      //     }]
-      //   }
-      // })
     },
     Prova1:function(){
       console.log('cliccato1');
@@ -291,14 +266,14 @@ var app = new Vue({
 
       }
 
-      let myChart = document.getElementById('myChart1').getContext('2d');
+      let myChart = document.getElementById('myChar').getContext('2d');
 
       // Global Options
-        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.FontFamily = 'Lato';
         Chart.defaults.global.defaultFontSize = 18;
         Chart.defaults.global.defaultFontColor = '#777';
 
-      var massPopChart = new Chart(myChart1, {
+      var massPopChart = new Chart(myChar, {
         type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data:{
           labels:[' 40% carboidrati ' + percCarb +' Kcal', ' 25% grassi ' + percGrassi +' Kcal', ' 35% proteine ' + percProte +' Kcal'],
@@ -354,25 +329,7 @@ var app = new Vue({
 
     }
 
-    // outer grafico ciambella
-
-
-
-    /*  getRandomInt:function (max){
-    return Math.floor(Math.random() * max);
-  },
-  percentuale:function(){
-  do {
-  RProte =getRandomInt(this.percProte);
-  RGrassi =getRandomInt(this.percGrassi);
-  RCarb =getRandomInt(this.percCarb);
-  this.i++;
-}
-while ((RProte+RGrassi+RCarb)==this.Calorie);
-if ((RProte+RGrassi+RCarb)==this.Calorie) {
-document.getElementById(randomPRG).innerHTML='RProte'+'RGrassi'+'RCarb';
-}
-}*/
+   
 }
 })
 
