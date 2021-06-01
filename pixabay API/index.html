@@ -8,17 +8,17 @@
 </head>
 <body>
   <div id="app">
-    <div v-for="serie in series">
-    <img src="{{serie.pageURL}}" alt="">  
+    <div v-for="image in images">
+    <img :src="image.largeImageURL" alt="">
       <div class="">
-      {{serie.id}}
-        {{serie.tags}}
-        {{serie.likes}}
+      {{image.id}}
+        {{image.tags}}
+        {{image.likes}}
 
       </div>
     </div>
     <img src="https://cdn.pixabay.com/user/2015/11/27/06-58-54-609_250x250.jpg" alt="">
-    <button @click='moviesSearch' type="button" name="button">cerca serie</button>
+    <button @click='imagesSearch' type="button" name="button">cerca immagine</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
