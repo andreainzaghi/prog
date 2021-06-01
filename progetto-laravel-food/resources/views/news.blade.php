@@ -6,7 +6,9 @@
 
 @section('content')
 	<div class="product">
-		
+		@foreach ($foods as $food)
+		<p>{{$food['Food_Group']}}</p>
+		@endforeach
 	</div>
 @endsection
 
