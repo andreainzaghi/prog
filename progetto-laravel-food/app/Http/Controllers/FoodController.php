@@ -26,13 +26,3 @@ class FoodController extends Controller
         return view('home', ['Foods'=>$foods,'search'=>$search]);
     }
 }
-
-
-    
-// $test=array();
-
-// foreach ($values as $values => $key) { 
-// 		if(!in_array($key, $test)){
-// 		$test[]=$value;
-// 		}    
-// }

@@ -28,9 +28,22 @@ Route::get('/chilopage', function() {
 
 Route::get('/news', function() {
     $foods = Food::All();
+    $people = array();
+    $food_group = $foods['Food_Group'];
+    for($i = 0; i < $food_group;$i++){
+        $i = $people;
+    }
+    echo $people;
 
-
-    return view('news',['food' => $foods]);
+// if (in_array("Glenn", $food_group))
+//   {
+//   echo "Match found";
+//   }
+// else
+//   {
+//   echo "Match not found";
+//   }   
+    return view('news',['foods' => $foods,'food_group' => $food_group]);
 })->name('news');
 
 
